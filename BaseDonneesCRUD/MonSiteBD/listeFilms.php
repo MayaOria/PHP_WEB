@@ -38,7 +38,7 @@ foreach($arrayResults as $film){
         foreach ($film as $key => $value){
                 echo $key. " : ". $value. "<br>";
         }
-        echo "<a href ='./effacerFilm.php?id=".$film['id']."'>Supprimer</a>";
+        echo "<br><a href ='./effacerFilm.php?id=".$film['id']."'>Supprimer</a>";
         
 }
 
