@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+.color {
+ color:#5e9091;
+}
 html body{
 
     font-family: 'Poppins', sans-serif;
