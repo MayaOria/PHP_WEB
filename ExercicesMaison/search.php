@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 511f0c5de65920f758a844ecf672514f46ad4787
 <h1 class='insert'>Suis-je dans la maison ?</h1>
 <form action="./searchTraitement.php" method="POST">
     <label class = 'my-10' for="name">Quel est mon nom ? </label>
