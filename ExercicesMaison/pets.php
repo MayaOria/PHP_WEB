@@ -38,6 +38,7 @@ foreach($arrayResults as $animal){
                 echo $key. " : ". $value. "<br>";
         }
         echo "<br><a class='btn' href ='./effacerPets.php?id=".$animal['id']."'>Effacer</a>";
+        echo "&nbsp; <a class='btn' href='./index.php?p=modifierPets&id=".$animal['id']."'>Modifier</a>";
         
 }
 

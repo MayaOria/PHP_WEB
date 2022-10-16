@@ -8,6 +8,15 @@
             <li><a href="./index.php?p=insert">Ajouter un animal</a></li>
             <li><a href="./index.php?p=search">Rechercher un animal</a></li>
         </ul>
+        <?php
+                if (isset($_SESSION['loginConnecte'])){
+                    // $_SESSION['loginConnecte'] 
+                    echo "<a class='nav-link' href='./logout.php'>Se deconnecter</a>";
+                }
+                else {
+                    header ("location: ./login.php");
+                }
+            ?>
 
         
     </nav>

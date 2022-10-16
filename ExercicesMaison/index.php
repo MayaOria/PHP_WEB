@@ -7,8 +7,6 @@
     <title>Pets database | Zouzou world</title>
     <meta name="description" content="My first web site including a data base of all my pets">
     <script src="https://kit.fontawesome.com/dfcf8bdd46.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Poppins:wght@200;300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
