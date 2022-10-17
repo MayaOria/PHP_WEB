@@ -8,6 +8,7 @@
     <title>Connectez vous</title>
 </head>
 <body>
+    <div class="border border1">
     <form action="./loginTraitement.php" method ="POST">
     <label class = 'my-10' for="login">Login ?</label>    
     <input class = 'input' type="email" name="login" id="login">
@@ -15,14 +16,19 @@
     <input class = 'input' type="password" name="password" id="password">
     <input class = "btn btn-envoyer" type="submit" value="CONNEXION">
     </form>
-    <p><a href="./inscription.php">Créer un compte</a></p>
-
+    </div>
+    <br>
+    <div class='border'>
+    <h2>Pas encore inscrit ?</h2>
+    <br>
+    <p><a class = "btn btn-envoyer" href="./inscription.php">Créer un compte</a></p>
+    </div>
     <?php
         if (isset ($_GET['error'])){
             // traiter les différents types d'erreur
             switch ($_GET['error']){
                 case "badPass":
-                    echo "<h5>Le password est incorrect</h5>";
+                    echo "<br><br><h3 class = 'border' style = 'color: red;'>Le password est incorrect</h5>";
                     break;
             }
         }

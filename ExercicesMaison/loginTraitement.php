@@ -34,6 +34,7 @@ $passwordBD = $result['password'];
 
 if(password_verify($password, $passwordBD) === true){
     $_SESSION ['loginConnecte'] = $login;
+    var_dump($_SESSION);
     header('location: ./index.php');
 }
 

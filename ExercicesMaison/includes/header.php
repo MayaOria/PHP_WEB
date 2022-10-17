@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <header class='header'>
     <nav>
         <a href="./index.php?p=home"><i class="fa-solid fa-paw fa-3x my-10 icon"></i></a>
@@ -14,6 +17,7 @@
                     echo "<a class='nav-link' href='./logout.php'>Se deconnecter</a>";
                 }
                 else {
+                    
                     header ("location: ./login.php");
                 }
             ?>
