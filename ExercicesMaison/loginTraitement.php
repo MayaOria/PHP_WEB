@@ -6,7 +6,7 @@ include "./connexion/db.php";
 // 1. Récuperer le login $_POST['login'] et le mot de pass
 
 $login = $_POST['login'];
-$password = $POST['password'];
+$password = $_POST['password'];
 
 // 2. Chercher le login dans la BD et obtenir son password
 try {
@@ -33,8 +33,7 @@ $passwordBD = $result['password'];
 // 3. Comparer le password reçu du formulaire avec le password de l'user obtenu de la BD
 
 if(password_verify($password, $passwordBD) === true){
-
-    $_SESSION['loginConnecte'] = $login;
+    $_SESSION ['loginConnecte'] = $login;
     header('location: ./index.php');
 }
 

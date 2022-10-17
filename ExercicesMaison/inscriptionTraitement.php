@@ -1,10 +1,10 @@
 <?php
-
+session_start();
 include "./connexion/db.php";
 
 $firstname = $_POST['firstname'];
 $lastname = $_POST['lastname'];
-$login = filter_input (INPUT_POST, $_POST['login'], FILTER_VALIDATE_EMAIL);
+$login = filter_input (INPUT_POST, 'login', FILTER_VALIDATE_EMAIL);
 
 if(!$login){
 
@@ -41,15 +41,11 @@ $stmt->bindValue(":login", $login);
 $stmt->bindValue(":password", $password);
 $stmt->execute();
 
-$stmt->errorInfo;
+// var_dump($stmt->errorInfo());
+$_SESSION ['loginConnecte'] = $login;
+header('location: ./index.php');
 
-// $_SESSION['loginConnecte'] = $login;
-//     header('location: ./index.php');
-// }
 
-// else{
-//     header("location: ./index.php?p=pg_404");
-// }
 
 
 
