@@ -12,7 +12,7 @@ try {
             die();
     }
     
-    $name = "%".$_GET['name']."%";
+    $name = "%".$_POST['name']."%";
     
     $sql = "SELECT * FROM animal WHERE name LIKE :name";
     
