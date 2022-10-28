@@ -33,12 +33,17 @@ $arrayResults = $stmt->fetchAll(PDO::FETCH_ASSOC);
 //5. Afficher les donnees selon nos besoins
 
 foreach($arrayResults as $animal){
-        echo "<br><br>";
-        foreach ($animal as $key => $value){
-                echo $key. " : ". $value. "<br>";
-        }
-        echo "<br><a class='btn' href ='./effacerPets.php?id=".$animal['id']."'>Effacer</a>";
-        echo "&nbsp; <a class='btn' href='./index.php?p=modifierPets&id=".$animal['id']."'>Modifier</a>";
+        
+        echo'<div class = "card auto" style = "width:12rem;">';
+        
+        echo "<img src = './images/".$animal['image']."'>" ;
+        echo '<h5 class="card-title">'. $animal['name'] . '</h5>';
+        echo '<br>';
+        echo "<a class='btn' href='./index.php?p=afficherPet&id=".$animal['id']."'>En savoir +</a>";
+        echo "<a class='btn' href ='./effacerPets.php?id=".$animal['id']."'>Effacer</a>";
+        echo "<a class='btn' href='./index.php?p=modifierPets&id=".$animal['id']."'>Modifier</a>";
+        echo '</div>';
+        
         
 }
 

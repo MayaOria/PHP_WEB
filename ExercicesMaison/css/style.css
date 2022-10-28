@@ -63,6 +63,10 @@ color: #5e9091;
     margin-bottom: 10px;
 }
 
+.auto{
+    margin: auto;
+}
+
 .header{
     background: #84a59d;
     overflow: auto;
@@ -113,7 +117,7 @@ color: #5e9091;
 }
 
 main{
-    background: url(../images/IMG_20220507_190428.jpg) no-repeat left center;
+    /* background: url(../images/IMG_20220507_190428.jpg) no-repeat left center; */
     
     height: 100vh;
     width :100%;
@@ -196,3 +200,12 @@ footer p {
 .border1{
     margin-top: 300px;
 }
+
+.file{
+display: none;
+}
+
+
+
+
+

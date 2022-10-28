@@ -27,7 +27,7 @@ $result = $stmt -> fetch(PDO::FETCH_ASSOC);
 
 <div class="container">
     <h2>Modifier les informations</h2>
-    <form action="./modifierPetsTraitement.php" method="POST">
+    <form enctype="multipart/form-data" action="./modifierPetsTraitement.php" method="POST">
    
     <input type="hidden"  name= "id" id="id" value= <?=$result['id']?>>
     <label class = 'my-10' for="name">Nom : </label>
@@ -61,7 +61,9 @@ $result = $stmt -> fetch(PDO::FETCH_ASSOC);
         ?>
     <label class = 'my-10' for="birthdate">Date de naissance : </label>
     <input class = 'input' type="date" name= "birthdate" id="birthdate" value= <?= $result['birthdate'] ?>>
-    <input class = 'btn btn-envoyer' type="submit" value="MODIFIER">
+    <label class = 'btn btn-envoyer' for="image">MODIFIER LA PHOTO<input class="file" type='file' name="image" id="image"></label>
+    <br><br>
+    <input class = 'btn btn-envoyer' type="submit" value="SAUVEGARDER">
     
 </form>
 </div>

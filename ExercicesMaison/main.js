@@ -4,12 +4,12 @@ document.getElementById("name").addEventListener("keyup", (event)=>{
     let formulaire = new FormData (document.getElementById("formHTML"));
     // console.log(formulaire);
     let xhr = new XMLHttpRequest();
-
+    
     xhr.onreadystatechange = (event) =>{
         if(xhr.readyState === 4){
             if(xhr.status == 200 || xhr.status == 304){
 
-                // console.log("ok");
+                
                 let result = JSON.parse(xhr.responseText);
                 if (result != "error"){
                     
@@ -19,7 +19,11 @@ document.getElementById("name").addEventListener("keyup", (event)=>{
                     result.forEach((element) => {
                         
                         let li = document.createElement("li");
-                        li.innerHTML= element.name + ", " + element.gender + ", " + element.birthdate;
+                        let a = document.createElement('a')
+                        a.href = 'index.php?p=searchGoogleTraitementResult&id='+element.id;
+                        a.innerHTML= element.name + ", " + element.gender + ", " + element.birthdate;
+                        console.log(a)
+                        li.appendChild(a);
                         ul.appendChild(li);
                     });
 
